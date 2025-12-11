@@ -1,9 +1,15 @@
-# Sistem Pengaduan Warga Terintegrasi
+# SIPINDA – Sistem Informasi Pengaduan Infrastruktur Daerah
 
 Tugas Besar PPW — Kelompok 29
 
-Dokumen ini merupakan README resmi dari proyek Sistem Pengaduan Warga Terintegrasi. Sistem ini dirancang agar warga dapat melapor dengan mudah, petugas dapat menindaklanjuti secara terarah, dan admin dapat mengelola seluruh alur dengan lebih transparan.
+## Deskripsi Proyek
+Sistem SIPINDA berfungsi sebagai platform pelaporan kerusakan infrastruktur oleh masyarakat dan memastikan setiap laporan ditangani dengan alur kerja yang jelas:
 
+1. Warga melaporkan pengaduan.
+2. Admin memverifikasi dan menugaskan petugas.
+3. Petugas menangani laporan di lapangan dan mengunggah bukti.
+4. Admin melakukan validasi akhir.
+5. Warga dapat melihat status akhir secara transparan.
 ---
 
 ## Identitas Kelompok 29
@@ -11,7 +17,7 @@ Dokumen ini merupakan README resmi dari proyek Sistem Pengaduan Warga Terintegra
 | No | Nama                 | NIM        | Peran                             |
 | -- | -------------------- | ---------- | --------------------------------- |
 | 1  | Ramayuda Mahardika   | 2315061126 | Ketua Kelompok, Backend Developer |
-| 2  | Arianti Kartika Dewi | 2315061047 | Admin Portal Developer            |
+| 2  | Arianti Kartika Dewi | 2315061047 | Frontend Admin            |
 | 3  | Aulia Rahmi Shakira  | 2315061104 | Frontend Pelapor                  |
 | 4  | Recky Valerian       | 2315061057 | Frontend Petugas                  |
 
@@ -47,12 +53,7 @@ Berisi:
 
 Berisi seluruh halaman warga/pelapor menggunakan:
 
-* HTML
-* CSS3 (Native)
-* Bootstrap
-* TailwindCSS
-* JavaScript manual
-
+Berisi halaman dashboard pelapor, form pengaduan, filter berdasarkan status, profil pelapor, dan halaman detail tiket.
 ## Frontend Admin (Developer: Arianti)
 
 Berisi halaman dashboard admin, pengelolaan petugas, serta manajemen pengaduan.
@@ -88,6 +89,9 @@ Dengan cara ini, pekerjaan tiap anggota tidak saling bertabrakan.
 ---
 
 # Penjelasan ERD Sistem
+
+<img width="2291" height="1721" alt="erd-tubes-ppw drawio" src="https://github.com/user-attachments/assets/610183c0-ff47-41b1-8d8b-8506d09de511" />
+
 
 ERD menggambarkan hubungan antar entitas utama: warga, pengaduan, petugas, dan tanggapan/progres.
 
@@ -141,12 +145,15 @@ Berikut halaman yang dibuat, sesuai pembagian tim.
 
 ## 1. Halaman Login Pelapor
 
+<img width="684" height="614" alt="image" src="https://github.com/user-attachments/assets/2ec66e89-47fc-4ba0-9b88-4aff8e7a3eda" />
+
 Digunakan warga untuk masuk ke sistem.
 Berisi input username/email, password, dan tombol menuju register.
 
-(Gambar halaman ditempatkan di bawah header ini dalam README final Anda)
 
 ## 2. Halaman Register Pelapor
+
+<img width="241" height="332" alt="image" src="https://github.com/user-attachments/assets/d2b40ac8-8572-4f11-a763-5c4917db8612" />
 
 Berisi form pendaftaran akun warga:
 
@@ -160,6 +167,9 @@ Setelah berhasil, diarahkan ke halaman login.
 
 ## 3. Halaman Dashboard Warga
 
+<img width="679" height="608" alt="image" src="https://github.com/user-attachments/assets/4fb820ac-c485-4150-aeff-72f4371c8e55" />
+
+
 Menampilkan:
 
 * Ringkasan jumlah laporan
@@ -168,6 +178,8 @@ Menampilkan:
 * Profil singkat
 
 ## 4. Halaman Buat Pengaduan Baru
+
+<img width="337" height="586" alt="image" src="https://github.com/user-attachments/assets/7ecd3618-8384-496b-921b-2d33f434e9c4" />
 
 Form pengajuan laporan baru:
 
@@ -178,6 +190,9 @@ Form pengajuan laporan baru:
 * Tombol submit
 
 ## 5. Halaman Riwayat Pengaduan Warga
+
+<img width="320" height="353" alt="image" src="https://github.com/user-attachments/assets/a67182ee-d37d-47f2-94cb-49e72fd342fc" />
+
 
 Daftar seluruh pengaduan milik warga dalam bentuk tabel.
 
@@ -191,6 +206,19 @@ Berisi:
 * Tanggapan petugas
 * Foto sebelum dan sesudah (jika sudah tersedia)
 
+## 7. Halaman Profil Pelapor
+
+<img width="319" height="367" alt="image" src="https://github.com/user-attachments/assets/d459ef19-8778-447b-953b-57d09f9bfb93" />
+
+Berisi:
+
+* Foto Profil
+* Nama
+* E-mail
+* No.Telp
+* NIK
+* Alamat
+* Indormasi Akun
 ---
 
 # Bagian B — Frontend Admin (Developer: Arianti)
@@ -279,11 +307,3 @@ Sistem ini dibuat untuk:
 * Mengatur pendistribusian tugas petugas secara terstruktur
 * Memudahkan admin dalam memantau dan mengevaluasi laporan
 
----
-
-Jika Anda ingin menambahkan:
-– Gambar setiap halaman
-– Penjelasan tabel database berdasarkan ERD
-– Contoh endpoint backend
-
-Cukup beri tahu dan akan saya lengkapi.
